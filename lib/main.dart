@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Icon(Icons.arrow_downward, color: Colors.red,),
+                        Icon(Icons.arrow_upward, color: Colors.red,),
                         SizedBox(
                           width: 10,
                         ),
@@ -140,7 +140,7 @@ class _HomePageState extends State<HomePage> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
-                        Text("+1200", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey),),
+                        Text("-1200", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey),),
                         Text(" US", style: TextStyle(color: Colors.grey, fontSize: 12),)
                       ],
                     )
@@ -159,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Icon(Icons.arrow_downward, color: Colors.red,),
+                        Icon(Icons.arrow_upward, color: Colors.red,),
                         SizedBox(
                           width: 10,
                         ),
@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
-                        Text("+1200", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey),),
+                        Text("-1200", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey),),
                         Text(" US", style: TextStyle(color: Colors.grey, fontSize: 12),)
                       ],
                     )
@@ -188,7 +188,7 @@ class _HomePageState extends State<HomePage> {
                   children: <Widget>[
                     Row(
                       children: <Widget>[
-                        Icon(Icons.arrow_downward, color: Colors.red,),
+                        Icon(Icons.arrow_upward, color: Colors.red,),
                         SizedBox(
                           width: 10,
                         ),
@@ -198,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
-                        Text("+1200", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey),),
+                        Text("-1200", style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey),),
                         Text(" US", style: TextStyle(color: Colors.grey, fontSize: 12),)
                       ],
                     )
