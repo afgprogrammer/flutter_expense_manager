@@ -1,6 +1,6 @@
-# expense_manager
+# Flutter Expense Manager Application
 
-A new Flutter project.
+A new Flutter Expense Manager Application with flutter-redux.
 
 ## Getting Started
 
