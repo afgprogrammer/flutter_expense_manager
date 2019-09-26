@@ -18,6 +18,7 @@ class _CardViewState extends State<CardView> {
       aspectRatio: 3.1 / 2,
       child: GestureDetector(
         child: Container(
+          margin: EdgeInsets.only(right: 20),
           decoration: BoxDecoration(
             color: Colors.black87,
             borderRadius: BorderRadius.circular(20.0),
