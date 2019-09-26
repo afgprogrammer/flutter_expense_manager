@@ -1,14 +1,21 @@
+import 'package:expense_manager/Components/CardList.dart';
 import 'package:expense_manager/Components/CardView.dart';
 import 'package:expense_manager/Components/TransactionView.dart';
 import 'package:expense_manager/Model/CardModel.dart';
 import 'package:expense_manager/Model/TransactionModel.dart';
+import 'package:expense_manager/Pages/AddCardPage.dart';
+import 'package:expense_manager/Providers/CardProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(
-  new MaterialApp(
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(),
-    home: HomePage(),
+  ChangeNotifierProvider<CardProvider>(
+    builder: (context) => CardProvider(),
+    child: new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(),
+      home: HomePage(),
+    )
   )
 );
 
@@ -18,8 +25,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
   @override
   Widget build(BuildContext context) {
+    Provider.of<CardProvider>(context).initialState();
+
     return Scaffold(
       backgroundColor: Color.fromRGBO(238, 241, 242, 1),
       appBar: AppBar(
@@ -33,7 +43,9 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(
               Icons.add,
               color: Colors.black45,
-            ), onPressed: () {},
+            ), onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => AddCardPage()));
+            },
           )
         ],
       ),
@@ -43,9 +55,25 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Container(
-                height: 210,
-                child: CardView(CardModel(available: 1000, currency: 'US', name: 'MasterCard', number: '1234 **** **** 4321')),
+              (Provider.of<CardProvider>(context).getCardLength() > 0 ?
+                Container(
+                  height: 210,
+                  child: Consumer<CardProvider>(
+                    builder: (context, cards, child) => CardList(cards: cards.allCards,),
+                  )
+                ) :
+                Container(
+                  height: 210,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text("Add your new card click the \n + \n button in the top right.",
+                    textAlign: TextAlign.center, style: TextStyle(color: Colors.white, fontSize: 20),),
+                  ),
+                )
               ),
               SizedBox(
                 height: 30,
