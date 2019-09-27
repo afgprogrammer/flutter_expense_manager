@@ -28,8 +28,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Provider.of<CardProvider>(context).initialState();
-
     return Scaffold(
       backgroundColor: Color.fromRGBO(238, 241, 242, 1),
       appBar: AppBar(

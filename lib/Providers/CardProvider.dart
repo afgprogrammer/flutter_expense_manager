@@ -8,6 +8,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 class CardProvider with ChangeNotifier {
   List<CardModel> cards = [];
 
+  CardProvider() {
+    initialState();
+  }
+
   UnmodifiableListView<CardModel> get allCards => UnmodifiableListView(cards);
 
   void initialState() {
