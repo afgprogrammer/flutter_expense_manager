@@ -7,7 +7,5 @@ A Flutter sample app that shows a state management approach using the Provider p
 
 ## Screenshoot
 
-<img src="assets/images/preview1.png" height="300em" />
-<img src="assets/images/preview2.png" height="300em" />
-<img src="assets/images/preview3.png" height="300em" />
+<img src="assets/images/preview1.png" height="300em" /><img src="assets/images/preview2.png" height="300em" /><img src="assets/images/preview3.png" height="300em" />
 
